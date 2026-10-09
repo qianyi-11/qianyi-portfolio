@@ -1,61 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB QY</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee Qian Yi — Portfolio</title>
+<meta name="description" content="Lee Qian Yi — Computer Science (Information System) student at University Malaya. Projects, skills and experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
 
-        <!-- NAVIGATION BAR -->
-        <div class="container-navbar">
-            <ul class="ul-navbar">
-                <li class="li-navbar"><a href="index.html" class="a-navbar">HOME</a></li>
-                <li class="li-navbar"><a href="about.html" class="a-navbar">ABOUT ME</a></li>
-                <li class="li-navbar"><a href="contact.html" class="a-navbar">CONTACT</a></li>
-            </ul>
+<div class="bg-fx" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- NAV -->
+<header class="navbar" id="navbar">
+  <a href="#home" class="brand">QY<span>.</span></a>
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-link>Home</a></li>
+      <li><a href="#about" class="nav-link" data-link>About</a></li>
+      <li><a href="#skills" class="nav-link" data-link>Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-link>Projects</a></li>
+      <li><a href="#experience" class="nav-link" data-link>Experience</a></li>
+      <li><a href="#contact" class="nav-link" data-link>Contact</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <p class="reveal eyebrow">Hi, I'm</p>
+      <h1 class="reveal hero-name">Lee Qian Yi</h1>
+      <h2 class="reveal hero-role">I am a <span class="typewriter" id="typewriter"></span><span class="cursor">|</span></h2>
+
+      <div class="hero-timeline reveal">
+        <div class="hero-tl-item">
+          <span class="hero-tl-icon icon-a">🎓</span>
+          <div>
+            <h3>Bachelor of Computer Science (Information System)</h3>
+            <p>Universiti Malaya · Year 3</p>
+          </div>
         </div>
-        <!-- NAVIGATION BAR END -->
-
-        <!-- CONTENT -->
-        <div class="container-content">
-            <div class="card">
-                <a href="https://www.instagram.com/leeqyi_/profilecard/?igsh=ZjcwOGpvcThveWlw">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="img-content" alt="Instagram">
-                    <p>Instagram</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://www.facebook.com/qianyi.lee.965?mibextid=LQQJ4d">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" class="img-content" alt="Facebook">
-                    <p>Facebook</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://www.threads.net/@leeqyi_?igshid=NTc4MTIwNjQ2YQ==">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Threads_%28app%29_logo.svg/512px-Threads_%28app%29_logo.svg.png" class="img-content" alt="Threads">
-                    <p>Threads</p>
-                </a>
-            </div>
+        <div class="hero-tl-item">
+          <span class="hero-tl-icon icon-b">🧭</span>
+          <div>
+            <h3>Head of Logistics, UM Hackathon 2025</h3>
+            <p>Leadership &amp; Volunteering</p>
+          </div>
         </div>
-        <!-- CONTENT END -->
-
-        <!-- FOOTER -->
-        <div class="container-footer">
-            <h1 class="h1-footer">Click to visit haha😊</h1>
+        <div class="hero-tl-item">
+          <span class="hero-tl-icon icon-c">🏆</span>
+          <div>
+            <h3>Top 8 Finalist, ESUM x Rexharge Case Study</h3>
+            <p>Competition Participation</p>
+          </div>
         </div>
-        <!-- FOOTER END -->
+      </div>
+
+      <div class="reveal hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-right reveal">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-rings" aria-hidden="true"></div>
+        <div class="hero-photo-dots" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-photo-fallback">QY</div>
+        <img src="assets/profile.png" alt="Lee Qian Yi" class="hero-photo"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="hero-contact-cards">
+        <a class="hero-card" href="mailto:qianyi351@gmail.com">
+          <span class="hero-card-icon">✉️</span>
+          <span class="hero-card-text"><strong>Email</strong><small>qianyi351@gmail.com</small></span>
+        </a>
+        <a class="hero-card" href="https://wa.me/60102098298" target="_blank" rel="noopener">
+          <span class="hero-card-icon">💬</span>
+          <span class="hero-card-text"><strong>WhatsApp</strong><small>Message me</small></span>
+        </a>
+        <a class="hero-card" href="https://www.linkedin.com/in/lee-qian-yi" target="_blank" rel="noopener">
+          <span class="hero-card-icon">in</span>
+          <span class="hero-card-text"><strong>LinkedIn</strong><small>Network</small></span>
+        </a>
+        <a class="hero-card" href="https://www.instagram.com/leeqyi_/profilecard/?igsh=ZjcwOGpvcThveWlw" target="_blank" rel="noopener">
+          <span class="hero-card-icon">ig</span>
+          <span class="hero-card-text"><strong>Instagram</strong><small>Say hi</small></span>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <p class="section-eyebrow reveal">About Me</p>
+    <h2 class="section-title reveal">Year 3 CS student, still building.</h2>
+
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>
+          Hardworking and enthusiastic Computer Science (Information System) student,
+          currently in <strong>Year 3</strong> at Universiti Malaya. I like turning ideas
+          into working prototypes — from autonomous drones to AI-driven scam detection —
+          and I'm always looking for the next hard problem to chew on.
+        </p>
+        <p>
+          Outside of code, I take on leadership and logistics roles for campus events,
+          because I enjoy the chaos of making things run on time just as much as I enjoy
+          debugging at 2am.
+        </p>
+        <div class="languages">
+          <span class="lang-pill">English</span>
+          <span class="lang-pill">Malay</span>
+          <span class="lang-pill">Mandarin</span>
+        </div>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor of Computer Science (Information System)</h3>
+            <p class="timeline-meta">Universiti Malaya · Current</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Program Matrikulasi</h3>
+            <p class="timeline-meta">Matrikulasi Negeri Sembilan · CGPA 4.0</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+            <p class="timeline-meta">SMK Bahau 2 · 10 A's</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <p class="section-eyebrow reveal">Skills</p>
+    <h2 class="section-title reveal">Tools I reach for.</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <h3>Languages & Frameworks</h3>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">React</span>
+          <span class="tag">Flutter</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Data & Platforms</h3>
+        <div class="tags">
+          <span class="tag">MongoDB</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">DB2SQL</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Android Studio</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Ways of Working</h3>
+        <div class="tags">
+          <span class="tag">Design Thinking</span>
+          <span class="tag">Problem-solving</span>
+          <span class="tag">Team-oriented</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Public Speaking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <p class="section-eyebrow reveal">Personal Projects</p>
+    <h2 class="section-title reveal">Things I've built.</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-card-glow"></div>
+        <h3>EVision</h3>
+        <p>An EV charger diagnostic system automating field inspection with computer vision and multimodal AI — OCR spec extraction, LED fault detection, blink pattern analysis and automated compliance reporting.</p>
+        <div class="tags">
+          <span class="tag">Flutter</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Google ML Kit</span><span class="tag">Gemini AI</span><span class="tag">Firebase</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card-glow"></div>
+        <h3>SurvAI</h3>
+        <p>An offline AI-powered autonomous drone system for real-time survivor detection and mission coordination.</p>
+        <div class="tags">
+          <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Ollama</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card-glow"></div>
+        <h3>TreasurAI</h3>
+        <p>An intelligent financial analytics platform supporting cash flow forecasting, ROI simulation and AI-driven business decisions.</p>
+        <div class="tags">
+          <span class="tag">GLM</span><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Vite</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card-glow"></div>
+        <h3>SafeCampusAI</h3>
+        <p>An AI-driven scam prevention platform helping people detect phishing, job scams and fraudulent offers.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Tailwind CSS</span><span class="tag">SQLite</span><span class="tag">Google Gemini API</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card-glow"></div>
+        <h3>BookCare</h3>
+        <p>A mobile app for second-hand book exchange and donation between students.</p>
+        <div class="tags">
+          <span class="tag">Android Studio</span><span class="tag">Firebase</span>
+        </div>
+      </article>
 
     </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section alt">
+    <p class="section-eyebrow reveal">Experience</p>
+    <h2 class="section-title reveal">Work, leadership & participation.</h2>
+
+    <div class="exp-columns">
+      <div class="exp-col reveal">
+        <h3 class="exp-col-title">Working Experience</h3>
+        <ul class="exp-list">
+          <li>
+            <span class="exp-role">Sales Assistant — Factory Outlet Store (F.O.S)</span>
+            <span class="exp-date">Apr 2023 – Jun 2023</span>
+          </li>
+          <li>
+            <span class="exp-role">Clerk — Longfa Motorsports Sdn. Bhd.</span>
+            <span class="exp-date">Jun 2024 – Sep 2024</span>
+          </li>
+          <li>
+            <span class="exp-role">Online Part-Time Tutor</span>
+            <span class="exp-date">Oct 2024 – Feb 2025</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="exp-col reveal">
+        <h3 class="exp-col-title">Leadership & Volunteering</h3>
+        <ul class="exp-list plain">
+          <li>Manager of SUKMUM 2026</li>
+          <li>Head of Logistics, UM Hackathon 2025</li>
+          <li>Student Lead, IS Department — Dean's Cup</li>
+          <li>Member, General Affairs Department — UMCO</li>
+          <li>Member, Sales and Marketing — PTUM</li>
+        </ul>
+      </div>
+
+      <div class="exp-col reveal">
+        <h3 class="exp-col-title">Participation</h3>
+        <ul class="exp-list plain">
+          <li>CodeNection 2024</li>
+          <li>KitaHack 2026</li>
+          <li>Varsity Hackathon 2026</li>
+          <li>ESUM x Rexharge Case Study Competition — <strong>Top 8 finalist</strong></li>
+          <li>UM Hackathon 2026</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <p class="section-eyebrow reveal">Contact</p>
+    <h2 class="section-title reveal">Let's build something together.</h2>
+    <p class="reveal contact-sub">
+      Open to internships, collaborations, and interesting problems. Reach out on
+      whichever channel is easiest for you.
+    </p>
+
+    <div class="contact-grid reveal">
+      <a class="contact-card" href="mailto:qianyi351@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">qianyi351@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+60102098298">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+60 10-209 8298</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/lee-qian-yi" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">lee-qian-yi</span>
+      </a>
+      <span class="contact-card static">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Kuala Lumpur, Malaysia</span>
+      </span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Lee Qian Yi · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
