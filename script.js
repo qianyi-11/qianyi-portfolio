@@ -59,12 +59,17 @@ const revealObserver = new IntersectionObserver(
 
 revealEls.forEach((el) => revealObserver.observe(el));
 
+// Hero is always on screen at load, so animate it in immediately
+requestAnimationFrame(() => {
+  document.querySelectorAll('.hero .reveal').forEach((el) => el.classList.add('in-view'));
+});
+
 // ===== Typewriter =====
 const roles = [
+  'Software Engineer Intern',
   'CS (Information System) Student',
-  'Builder of AI-powered tools',
-  'Hackathon enthusiast',
-  'Aspiring Software Engineer',
+  'Computer Vision enthusiast',
+  'Hackathon builder',
 ];
 const typewriterEl = document.getElementById('typewriter');
 let roleIndex = 0;
