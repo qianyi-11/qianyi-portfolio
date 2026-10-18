@@ -12,11 +12,14 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
 <div class="bg-fx" aria-hidden="true">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   <div class="blob blob-3"></div>
   <div class="grid-overlay"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
 </div>
 
 <!-- NAV -->
@@ -121,7 +124,14 @@
     </div>
     </div>
 
+    <canvas class="hero-wave" id="heroWave" aria-hidden="true"></canvas>
     <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- TECH MARQUEE -->
+  <section class="tech-marquee" aria-label="Technologies I use">
+    <div class="marquee" data-marquee="java:Java,python:Python,cpp:C++,js:JavaScript,ts:TypeScript,html:HTML,css:CSS,react:React,flutter:Flutter,androidstudio:Android Studio"></div>
+    <div class="marquee reverse" data-marquee="fastapi:FastAPI,firebase:Firebase,supabase:Supabase,postgres:PostgreSQL,sqlite:SQLite,mongodb:MongoDB,git:Git,github:GitHub,docker:Docker,vscode:VS Code,vercel:Vercel,pytorch:PyTorch,googlecolab:Google Colab,jupyter:Jupyter"></div>
   </section>
 
   <!-- ABOUT -->
@@ -250,119 +260,99 @@
     <p class="section-eyebrow reveal">Personal Projects</p>
     <h2 class="section-title reveal">Things I've built.</h2>
 
-    <div class="projects-grid">
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">01</span>
-        <h3>EVision</h3>
-        <p>A Flutter-based EV charger inspection and diagnostic application designed to help technicians assess charger conditions and identify potential issues. It provides guided inspection workflows, charger information capture, visual status detection, photo and video evidence collection, and diagnostic result summaries, with AI-assisted troubleshooting to support the maintenance process.</p>
-        <div class="tags">
-          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Material Design</span><span class="tag">Computer Vision</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">02</span>
-        <h3>SurvAI</h3>
-        <p>An offline autonomous rescue system designed to coordinate a fleet of drones during disaster response missions. It combines autonomous mission planning, swarm intelligence, real-time telemetry, and local AI reasoning to help drones efficiently search for survivors while operating without internet connectivity.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">LangGraph</span><span class="tag">Ollama</span><span class="tag">MCP</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">03</span>
-        <h3>Trippy</h3>
-        <p>An explainable group travel planning platform that turns individual preferences and votes into a practical shared itinerary. It manages group preferences, activity suggestions, voting, capacity-aware recommendations, itinerary sequencing and budget estimation, while making the decision process visible to everyone in the group.</p>
-        <div class="tags">
-          <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Prisma</span><span class="tag">PostgreSQL</span><span class="tag">Google Maps</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">04</span>
-        <h3>Centinel</h3>
-        <p>An enterprise governance platform designed to help organisations adopt AI more securely and responsibly. It provides an AI firewall for detecting and protecting sensitive information, Shadow AI monitoring, policy enforcement, compliance tracking, and AI usage transparency through governance dashboards and AI nutrition labels.</p>
-        <div class="tags">
-          <span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Google Gemini</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">05</span>
-        <h3>DuitSense</h3>
-        <p>A personal finance and money habit application designed to make financial management more engaging and accessible. It combines expense tracking, budgeting, AI-driven financial insights, savings projections, financial literacy content, and gamification such as challenges, streaks, XP, rewards and leaderboards.</p>
-        <div class="tags">
-          <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span><span class="tag">React Native Reanimated</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">06</span>
-        <h3>Shippeo</h3>
-        <p>A shipping document verification system built to reduce the manual effort of checking shipping documents. It processes emails and documents, extracts information from Shipping Instructions and Bills of Lading, and uses deterministic comparison logic to flag discrepancies across key fields, with source evidence and human-review workflows for uncertain cases.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Firebase</span><span class="tag">Google Gemini</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">07</span>
-        <h3>TreasurAI</h3>
-        <p>An intelligent financial decision-support platform that combines statistical modelling with generative AI to help businesses make better financial and operational decisions. It provides cash-flow forecasting, ROI simulations, scenario planning, supplier negotiation recommendations, and an interactive dashboard that turns financial data into actionable insights.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">GLM</span><span class="tag">Generative AI</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">08</span>
-        <h3>InsightHUB</h3>
-        <p>A web-based KPI management system designed to help organisations manage employee performance in a more structured and transparent way. It supports KPI creation and assignment, progress tracking, evidence submission and verification, role-based access, notifications, progress history, and dashboards for managers to monitor overall performance.</p>
-        <div class="tags">
-          <span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">Bootstrap</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">09</span>
-        <h3>BookCare</h3>
-        <p>An Android application that creates a community-driven marketplace for discovering, exchanging, and donating books. It combines book listings and exchange workflows with community discussions, user profiles, reviews, and an eco-reward system that encourages sustainable book sharing and reuse.</p>
-        <div class="tags">
-          <span class="tag">Java</span><span class="tag">Android</span><span class="tag">Firebase</span><span class="tag">Android Jetpack</span><span class="tag">Material Components</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">10</span>
-        <h3>SafeCampus AI</h3>
-        <p>An AI-powered digital safety platform designed to help students and early-career professionals identify potential scams. Users can analyse suspicious messages, screenshots, links, emails and sender information, while the platform provides risk explanations, safety recommendations, scam education, and a threat database.</p>
-        <div class="tags">
-          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Express.js</span><span class="tag">Google Gemini</span><span class="tag">SQLite</span><span class="tag">Tailwind CSS</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card-glow"></div>
-        <span class="project-num">11</span>
-        <h3>FraudGuard</h3>
-        <p>A machine-learning-powered fraud detection dashboard designed to identify suspicious financial transactions from bank notification alerts. It extracts transaction information, predicts fraud probability, assigns risk levels, and explains why transactions were flagged, with an interactive dashboard for fraud trends, risk distributions, alerts and analytics.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Plotly</span>
-        </div>
-      </article>
-
+    <div class="pj-filters reveal" role="tablist" aria-label="Filter projects">
+      <span class="pj-filter-pill" aria-hidden="true"></span>
+      <button class="pj-filter active" data-filter="all" role="tab" aria-selected="true">All<span>11</span></button>
+      <button class="pj-filter" data-filter="ai" role="tab" aria-selected="false">AI &amp; ML<span>7</span></button>
+      <button class="pj-filter" data-filter="web" role="tab" aria-selected="false">Web<span>6</span></button>
+      <button class="pj-filter" data-filter="mobile" role="tab" aria-selected="false">Mobile<span>3</span></button>
     </div>
+
+    <!-- Featured -->
+    <div class="pj-featured reveal">
+      <article class="pj-card" data-cat="mobile ai">
+        <div class="pj-cover" aria-hidden="true">
+          <svg viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="evScanG" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#22d3c8" stop-opacity="0"/>
+                <stop offset="1" stop-color="#22d3c8" stop-opacity="0.55"/>
+              </linearGradient>
+            </defs>
+            <!-- charger -->
+            <rect x="250" y="70" width="100" height="200" rx="16" fill="#171728" stroke="rgba(255,255,255,0.18)"/>
+            <rect x="266" y="88" width="68" height="44" rx="6" fill="#0f2b33" stroke="rgba(34,211,200,0.5)"/>
+            <text x="300" y="116" text-anchor="middle" font-family="monospace" font-size="13" fill="#22d3c8">22kW</text>
+            <circle class="ev-led" cx="285" cy="152" r="5" fill="#4ade80"/>
+            <circle cx="300" cy="152" r="5" fill="#3a3a4d"/>
+            <circle cx="315" cy="152" r="5" fill="#ff5c9e" opacity="0.6"/>
+            <path d="M300 270 C300 300, 380 300, 400 260 S 460 230, 470 270" stroke="rgba(255,255,255,0.25)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <!-- detection box -->
+            <g class="ev-box" fill="none" stroke="#22d3c8" stroke-width="3">
+              <path d="M262 82 h18 M262 82 v18"/><path d="M338 82 h-18 M338 82 v18"/>
+              <path d="M262 168 h18 M262 168 v-18"/><path d="M338 168 h-18 M338 168 v-18"/>
+            </g>
+            <g class="ev-tag">
+              <rect x="350" y="78" width="132" height="24" rx="5" fill="#22d3c8"/>
+              <text x="360" y="95" font-family="monospace" font-size="12" font-weight="700" fill="#08080f">LED OK · 0.98</text>
+            </g>
+            <!-- scan line -->
+            <g class="ev-scan">
+              <rect x="238" y="34" width="124" height="36" fill="url(#evScanG)"/>
+              <rect x="238" y="69" width="124" height="2" rx="1" fill="#22d3c8"/>
+            </g>
+          </svg>
+          <div class="pj-hud">SCAN <b>OCR</b> · LED STATE · BLINK PATTERN</div>
+        </div>
+        <div class="pj-body">
+          <div class="pj-meta"><span class="pj-chip feat">Featured</span><span class="pj-chip">Mobile</span><span class="pj-chip">Computer Vision</span></div>
+          <h3 class="pj-name">EVision</h3>
+          <p class="pj-sum">AI-assisted inspection and diagnostics for EV charger technicians.</p>
+          <div class="pj-more"><div>
+            <p>A Flutter app with guided inspection workflows, charger information capture, visual status detection, photo and video evidence collection and diagnostic summaries, with AI-assisted troubleshooting to support maintenance.</p>
+          </div></div>
+          <div class="pj-tech">
+            <img src="assets/icons/flutter.svg" alt="Flutter" title="Flutter">
+            <img src="assets/icons/dart.svg" alt="Dart" title="Dart">
+            <span class="more">Material Design</span><span class="more">Computer Vision</span>
+          </div>
+          <div class="pj-foot">
+            <span class="pj-num">01</span>
+            <a class="pj-link" href="https://github.com/qianyi-11" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pj-card" data-cat="ai">
+        <div class="pj-cover has-shot" aria-hidden="true">
+          <img class="pj-shot" src="assets/projects/survai.jpg" alt="" loading="lazy" width="1400" height="776">
+          <div class="pj-hud"><span class="live-dot"></span>MISSION <b>ACTIVE</b> · FLEET 3 DRONES · <b>OFFLINE</b></div>
+        </div>
+        <div class="pj-body">
+          <div class="pj-meta"><span class="pj-chip feat">Featured</span><span class="pj-chip">AI &amp; ML</span><span class="pj-chip">Autonomous</span></div>
+          <h3 class="pj-name">SurvAI</h3>
+          <p class="pj-sum">Offline drone-fleet coordination for disaster search and rescue.</p>
+          <div class="pj-more"><div>
+            <p>Combines autonomous mission planning, swarm intelligence, real-time telemetry and local AI reasoning so a fleet of drones can search for survivors efficiently, with no internet connection needed.</p>
+          </div></div>
+          <div class="pj-tech">
+            <img src="assets/icons/python.svg" alt="Python" title="Python">
+            <img src="assets/icons/fastapi.svg" alt="FastAPI" title="FastAPI">
+            <img src="assets/icons/react.svg" alt="React" title="React">
+            <img src="assets/icons/vite.svg" alt="Vite" title="Vite">
+            <span class="more">LangGraph</span><span class="more">Ollama</span><span class="more">MCP</span>
+          </div>
+          <div class="pj-foot">
+            <span class="pj-num">02</span>
+            <a class="pj-link" href="https://github.com/qianyi-11" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Grid -->
+    <div class="pj-grid reveal" id="pjGrid"></div>
+    <p class="pj-empty" id="pjEmpty">No projects in this category yet.</p>
   </section>
 
   <!-- EXPERIENCE -->
